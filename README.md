@@ -315,6 +315,63 @@ python run.py
 # Access at http://localhost:8000
 ```
 
+### 🐳 Docker Deployment
+
+#### Quick Start with Docker Hub
+
+```bash
+# Pull and run the latest image from Docker Hub
+docker run -d \
+  --name n8n-workflow-library \
+  -p 8000:8000 \
+  -v workflow_data:/app/data \
+  adam-beckett-1999/n8n-workflow-library:latest
+
+# Access at http://localhost:8000
+```
+
+#### Using Docker Compose
+
+```bash
+# Clone repository
+git clone <repo-url>
+cd n8n-workflows
+
+# Start with Docker Compose
+docker-compose up -d
+
+# Access at http://localhost:8000
+```
+
+#### Build Your Own Image
+
+```bash
+# Build the Docker image
+docker build -t n8n-workflow-library .
+
+# Run the container
+docker run -d \
+  --name n8n-workflow-library \
+  -p 8000:8000 \
+  n8n-workflow-library
+```
+
+#### Available Tags
+
+Our GitHub Actions automatically builds and pushes images to Docker Hub:
+
+- `latest` - Latest stable build from main branch
+- `v1.0.0` - Specific version tags
+- `main` - Latest development build
+
+#### Container Features
+
+- ✅ **Multi-platform**: Supports AMD64 and ARM64 architectures
+- ✅ **Health checks**: Built-in health monitoring
+- ✅ **Persistent data**: Volume mounting for database persistence
+- ✅ **Production ready**: Optimized for containerized deployments
+- ✅ **Auto-updates**: Images updated automatically on code changes
+
 ### Development Setup
 
 ```bash
@@ -400,6 +457,37 @@ Our system automatically converts technical filenames to user-friendly names:
   "unique_integrations": 365
 }
 ```
+
+---
+
+## 🔄 Automated CI/CD Pipeline
+
+This repository uses GitHub Actions to automatically build and deploy Docker images to Docker Hub whenever code is pushed to the main branch.
+
+### Pipeline Features
+
+- **Multi-platform builds**: Automatically builds for both AMD64 and ARM64 architectures
+- **Docker Hub publishing**: Images are automatically pushed to `adam-beckett-1999/n8n-workflow-library`
+- **Build caching**: Optimized build times using GitHub Actions cache
+- **Artifact attestation**: Images are signed and provenance is tracked
+- **Health checks**: Built-in health monitoring in all containers
+
+### Triggered Events
+
+- Push to `main` branch
+- New version tags (e.g., `v1.0.0`)
+- Manual workflow dispatch
+
+### Environment Variables Required
+
+To use the automated deployment, ensure these GitHub secrets are configured:
+
+- `DOCKERHUB_USERNAME` - Your Docker Hub username
+- `DOCKERHUB_TOKEN` - Your Docker Hub access token
+
+### Workflow Status
+
+Check the [Actions tab](../../actions) to monitor build status and deployment progress.
 
 ---
 
