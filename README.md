@@ -7,6 +7,7 @@ A professionally organized collection of **2,053 n8n workflows** with a lightnin
 **Experience 100x performance improvement over traditional documentation!**
 
 ### Quick Start - Fast Documentation System
+
 ```bash
 # Install dependencies
 pip install -r requirements.txt
@@ -19,6 +20,7 @@ http://localhost:8000
 ```
 
 **Features:**
+
 - ⚡ **Sub-100ms response times** with SQLite FTS5 search
 - 🔍 **Instant full-text search** with advanced filtering
 - 📱 **Responsive design** - works perfectly on mobile
@@ -45,13 +47,16 @@ http://localhost:8000
 ## 📂 Repository Organization
 
 ### Workflow Collection
+
 - **2,053 workflows** with meaningful, searchable names
 - **365 unique integrations** across popular platforms
 - **29,445 total nodes** with professional categorization
 - **Quality assurance** - All workflows analyzed and categorized
 
-### Advanced Naming System ✨
+### Advanced Naming System
+
 Our intelligent naming system converts technical filenames into readable titles:
+
 - **Before**: `2051_Telegram_Webhook_Automation_Webhook.json`
 - **After**: `Telegram Webhook Automation`
 - **100% meaningful names** with smart capitalization
@@ -66,7 +71,8 @@ The system includes an automated categorization feature that organizes workflows
 ### How Categorization Works
 
 1. **Run the categorization script**
-   ```
+
+   ```bash
    python create_categories.py
    ```
 
@@ -89,6 +95,7 @@ The system includes an automated categorization feature that organizes workflows
 ### Available Categories
 
 The categorization system includes the following main categories:
+
 - AI Agent Development
 - Business Process Automation
 - Cloud Storage & File Management
@@ -111,12 +118,12 @@ You can help expand the categorization by adding more service-to-category mappin
 
 Many workflow JSON files are conveniently named with the service name, often separated by underscores (_).
 
-
 ---
 
 ## 🛠 Usage Instructions
 
 ### Option 1: Modern Fast System (Recommended)
+
 ```bash
 # Clone repository
 git clone <repo-url>
@@ -135,6 +142,7 @@ python run.py
 ```
 
 ### Option 2: Development Mode
+
 ```bash
 # Start with auto-reload for development
 python run.py --dev
@@ -147,6 +155,7 @@ python run.py --reindex
 ```
 
 ### Import Workflows into n8n
+
 ```bash
 # Use the Python importer (recommended)
 python import_workflows.py
@@ -163,6 +172,7 @@ python import_workflows.py
 ## 📊 Workflow Statistics
 
 ### Current Collection Stats
+
 - **Total Workflows**: 2,053 automation workflows
 - **Active Workflows**: 215 (10.5% active rate)
 - **Total Nodes**: 29,445 (avg 14.3 nodes per workflow)
@@ -170,18 +180,22 @@ python import_workflows.py
 - **Database**: SQLite with FTS5 full-text search
 
 ### Trigger Distribution
+
 - **Complex**: 831 workflows (40.5%) - Multi-trigger systems
 - **Webhook**: 519 workflows (25.3%) - API-triggered automations  
 - **Manual**: 477 workflows (23.2%) - User-initiated workflows
 - **Scheduled**: 226 workflows (11.0%) - Time-based executions
 
 ### Complexity Analysis
+
 - **Low (≤5 nodes)**: ~35% - Simple automations
 - **Medium (6-15 nodes)**: ~45% - Standard workflows
 - **High (16+ nodes)**: ~20% - Complex enterprise systems
 
 ### Popular Integrations
+
 Top services by usage frequency:
+
 - **Communication**: Telegram, Discord, Slack, WhatsApp
 - **Cloud Storage**: Google Drive, Google Sheets, Dropbox
 - **Databases**: PostgreSQL, MySQL, MongoDB, Airtable
@@ -193,11 +207,13 @@ Top services by usage frequency:
 ## 🔍 Advanced Search Features
 
 ### Smart Search Categories
+
 Our system automatically categorizes workflows into 12 service categories:
 
-#### Available Categories:
+#### Search Category List
+
 - **messaging**: Telegram, Discord, Slack, WhatsApp, Teams
-- **ai_ml**: OpenAI, Anthropic, Hugging Face 
+- **ai_ml**: OpenAI, Anthropic, Hugging Face
 - **database**: PostgreSQL, MySQL, MongoDB, Redis, Airtable
 - **email**: Gmail, Mailjet, Outlook, SMTP/IMAP
 - **cloud_storage**: Google Drive, Google Docs, Dropbox, OneDrive
@@ -210,6 +226,7 @@ Our system automatically categorizes workflows into 12 service categories:
 - **development**: Webhook, HTTP Request, GraphQL, SSE
 
 ### API Usage Examples
+
 ```bash
 # Search workflows by text
 curl "http://localhost:8000/api/workflows?q=telegram+automation"
@@ -232,12 +249,14 @@ curl "http://localhost:8000/api/categories"
 ## 🏗 Technical Architecture
 
 ### Modern Stack
+
 - **SQLite Database** - FTS5 full-text search with 365 indexed integrations
 - **FastAPI Backend** - RESTful API with automatic OpenAPI documentation
 - **Responsive Frontend** - Modern HTML5 with embedded CSS/JavaScript
 - **Smart Analysis** - Automatic workflow categorization and naming
 
 ### Key Features
+
 - **Change Detection** - MD5 hashing for efficient re-indexing
 - **Background Processing** - Non-blocking workflow analysis
 - **Compressed Responses** - Gzip middleware for optimal speed
@@ -245,6 +264,7 @@ curl "http://localhost:8000/api/categories"
 - **Mobile Optimization** - Touch-friendly interface design
 
 ### Database Performance
+
 ```sql
 -- Optimized schema for lightning-fast queries
 CREATE TABLE workflows (
@@ -273,12 +293,14 @@ CREATE VIRTUAL TABLE workflows_fts USING fts5(
 ## 🔧 Setup & Requirements
 
 ### System Requirements
+
 - **Python 3.7+** - For running the documentation system
 - **Modern Browser** - Chrome, Firefox, Safari, Edge
 - **50MB Storage** - For SQLite database and indexes
 - **n8n Instance** - For importing and running workflows
 
 ### Installation
+
 ```bash
 # Clone repository
 git clone <repo-url>
@@ -294,6 +316,7 @@ python run.py
 ```
 
 ### Development Setup
+
 ```bash
 # Create virtual environment
 python3 -m venv .venv
@@ -315,6 +338,7 @@ python workflow_db.py --index --force
 ## 📋 Naming Convention
 
 ### Intelligent Formatting System
+
 Our system automatically converts technical filenames to user-friendly names:
 
 ```bash
@@ -325,11 +349,13 @@ Our system automatically converts technical filenames to user-friendly names:
 ```
 
 ### Technical Format
-```
+
+```txt
 [ID]_[Service1]_[Service2]_[Purpose]_[Trigger].json
 ```
 
 ### Smart Capitalization Rules
+
 - **HTTP** → HTTP (not Http)
 - **API** → API (not Api)  
 - **webhook** → Webhook
@@ -341,6 +367,7 @@ Our system automatically converts technical filenames to user-friendly names:
 ## 🚀 API Documentation
 
 ### Core Endpoints
+
 - `GET /` - Main workflow browser interface
 - `GET /api/stats` - Database statistics and metrics
 - `GET /api/workflows` - Search with filters and pagination
@@ -349,12 +376,14 @@ Our system automatically converts technical filenames to user-friendly names:
 - `GET /api/workflows/{filename}/diagram` - Generate Mermaid diagram
 
 ### Advanced Search
+
 - `GET /api/workflows/category/{category}` - Search by service category
 - `GET /api/categories` - List all available categories
 - `GET /api/integrations` - Get integration statistics
 - `POST /api/reindex` - Trigger background reindexing
 
 ### Response Examples
+
 ```json
 // GET /api/stats
 {
@@ -377,6 +406,7 @@ Our system automatically converts technical filenames to user-friendly names:
 ## 🤝 Contributing
 
 ### Adding New Workflows
+
 1. **Export workflow** as JSON from n8n
 2. **Name descriptively** following the established pattern
 3. **Add to workflows/** directory
@@ -384,6 +414,7 @@ Our system automatically converts technical filenames to user-friendly names:
 5. **Run reindexing** to update the database
 
 ### Quality Standards
+
 - ✅ Workflow must be functional and tested
 - ✅ Remove all credentials and sensitive data
 - ✅ Follow naming convention for consistency
@@ -395,12 +426,14 @@ Our system automatically converts technical filenames to user-friendly names:
 ## ⚠️ Important Notes
 
 ### Security & Privacy
+
 - **Review before use** - All workflows shared as-is for educational purposes
 - **Update credentials** - Replace API keys, tokens, and webhooks
 - **Test safely** - Verify in development environment first
 - **Check permissions** - Ensure proper access rights for integrations
 
 ### Compatibility
+
 - **n8n Version** - Compatible with n8n 1.0+ (most workflows)
 - **Community Nodes** - Some workflows may require additional node installations
 - **API Changes** - External services may have updated their APIs since creation
@@ -411,7 +444,9 @@ Our system automatically converts technical filenames to user-friendly names:
 ## 📚 Resources & References
 
 ### Workflow Sources
+
 This comprehensive collection includes workflows from:
+
 - **Official n8n.io** - Documentation and community examples
 - **GitHub repositories** - Open source community contributions  
 - **Blog posts & tutorials** - Real-world automation patterns
@@ -419,6 +454,7 @@ This comprehensive collection includes workflows from:
 - **Enterprise use cases** - Business process automations
 
 ### Learn More
+
 - [n8n Documentation](https://docs.n8n.io/) - Official documentation
 - [n8n Community](https://community.n8n.io/) - Community forum and support
 - [Workflow Templates](https://n8n.io/workflows/) - Official template library
@@ -429,6 +465,7 @@ This comprehensive collection includes workflows from:
 ## 🏆 Project Achievements
 
 ### Repository Transformation
+
 - **2,053 workflows** professionally organized and named
 - **365 unique integrations** automatically detected and categorized
 - **100% meaningful names** (improved from basic filename patterns)
@@ -436,6 +473,7 @@ This comprehensive collection includes workflows from:
 - **Advanced search** with 12 service categories
 
 ### Performance Revolution
+
 - **Sub-100ms search** with SQLite FTS5 full-text indexing
 - **Instant filtering** across 29,445 workflow nodes
 - **Mobile-optimized** responsive design for all devices
@@ -443,6 +481,7 @@ This comprehensive collection includes workflows from:
 - **Professional interface** with modern UX principles
 
 ### System Reliability
+
 - **Robust error handling** with graceful degradation
 - **Change detection** for efficient database updates
 - **Background processing** for non-blocking operations
@@ -456,5 +495,3 @@ This comprehensive collection includes workflows from:
 **🎯 Perfect for**: Developers, automation engineers, business analysts, and anyone looking to streamline their workflows with proven n8n automations.
 
 ---
-
-[中文](./README_ZH.md)
