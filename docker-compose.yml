@@ -1,7 +1,25 @@
 services:
-  doc:
-    image: workflows-doc:latest
+  n8n-workflow-library:
     build:
       context: .
+      dockerfile: Dockerfile
     ports:
       - "8000:8000"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      # Mount workflows as read-only for development
+      - ./workflows:/app/workflows:ro
+      # Persist database across container restarts
+      - workflow_data:/app/data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/stats"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+volumes:
+  workflow_data:
+    driver: local
