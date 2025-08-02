@@ -43,6 +43,8 @@ Thumbs.db
 # Application specific
 database/workflows.db
 database/workflows.db-*
+workflows.db
+workflows.db-*
 *.log
 
 # Temporary files
